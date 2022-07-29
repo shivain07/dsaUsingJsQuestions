@@ -96,7 +96,16 @@ You can't rely on the order the scripts will load in. jquery.js may load before 
 @__ If your scripts need to wait for parsing and depend on other scripts and/or the DOM being in place, load them using defer and put their corresponding <script> elements in the order you want the browser to execute them.
 
 
+@hoisting var hoisting
+Because var declarations are processed before any code is executed, declaring a variable anywhere in the code is equivalent to declaring it at the top. This also means that a variable can appear to be used before it's declared. This behavior is called "hoisting", as it appears that the variable declaration is moved to the top of the function or global code.
 
+@var vs @let
+var - global scope let - block scope
+var can be usedbefore declaring cause of @hosting leading to complexity in long run
+
+Secondly, when you use var, you can declare the same variable as many times as you like, but with let you can't.
+
+You can update, add, or remove properties of an object declared using @const, because even though the content of the object has changed, the constant is still pointing to the same object:
 
 
  */
