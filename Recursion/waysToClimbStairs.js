@@ -30,3 +30,4 @@ const countWay = (n) => {
 }
 
 countWay(n);
+// ["zero","one","two","three","four","five","six","seven","eight","nine"]
